@@ -1,1 +1,1 @@
-<h1>Create category</h1>
+<x-app-layout>Create category</x-app-layout>

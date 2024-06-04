@@ -7,19 +7,19 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function index() {
+    public function getIndex() {
         return view('category/index');
     }
 
-    public function show($id) {
+    public function getShow($id) {
         return view('category/show') . $id;
     }
 
-    public function create() {
+    public function getCreate() {
         return view('category/create');
     }
 
-    public function edit($id) {
+    public function getEdit($id) {
         return view('category/edit') .$id;
     }
 }
