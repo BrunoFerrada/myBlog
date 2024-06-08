@@ -1,1 +1,1 @@
-<h1>Edit category</h1>
+<x-app-layout>Edit category</x-app-layout>

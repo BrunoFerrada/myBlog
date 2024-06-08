@@ -1,1 +1,1 @@
-<h1>Index category</h1>
+<x-app-layout>Index category</x-app-layout>
