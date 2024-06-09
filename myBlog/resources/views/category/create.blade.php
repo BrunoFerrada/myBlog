@@ -6,13 +6,13 @@
             @csrf
             <div>
                 <label>
-                    <input type="text" name="title" placeholder="Ingrese un título" class="w-full px-3 py-2 rounded-md border bg-gray-900 border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                    <input type="text" name="title" placeholder="Ingrese un título" class="w-full px-3 py-2 rounded-md border bg-gray-900 border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-gray-100">
                 </label>
             </div>
 
             <div>
                 <label>
-                    <textarea name="content" placeholder="Ingrese su contenido" class="w-full px-3 py-2 rounded-md border bg-gray-900 border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600"></textarea>
+                    <textarea name="content" placeholder="Ingrese su contenido" class="w-full px-3 py-2 rounded-md border bg-gray-900 border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-gray-100"></textarea>
                 </label>
             </div>
 
