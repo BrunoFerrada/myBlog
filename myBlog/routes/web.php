@@ -25,7 +25,8 @@ Route::controller(CategoryController::class)->group(function(){
     Route::get('category/create', 'getCreate')->name('category.create');
     Route::post('category/','store')->name('category.store');
     Route::get('category/edit/{id}',  'getEdit')->name('category.edit'); 
-    Route::put('category/show/{id}',  'update')->name('category.update');  
+    Route::put('category/show/{id}',  'update')->name('category.update');
+    Route::delete('category/show/{id}',  'destroy')->name('category.destroy');  
 });
 
 Route::get('prueba', function(){
