@@ -5,7 +5,7 @@
                 <ul>
                     @foreach ($posts as $post)
                     <li class="bg-gray-600 text-gray-100 mt-5 ml-5 mr-5 rounded-full">
-                        <button class="w-full">
+                        <button class="w-full ">
                             <a href="/category/show/{{$post->id}}" class="ml-5">
                                 {{$post->title}}
                             </a>
