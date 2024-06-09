@@ -39,6 +39,26 @@ class CategoryController extends Controller
     }
 
     public function getEdit($id) {
-        return view('category/edit') .$id;
+        $post = post::find($id);
+        return view('category.edit', compact("post")) ;
     }
+
+    public function update(Request $request, $post) {
+       
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required',
+        ]);
+        $post = post::find($post);
+
+        $post->title = $validatedData['title'];
+        $post->content = $validatedData['content'];
+        $post->poster = Auth::user()->name;
+        $post->save();
+
+        return redirect("/category/show/".$post->id);
+    }
+
+    
+
 }

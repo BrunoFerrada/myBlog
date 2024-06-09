@@ -8,6 +8,9 @@
             {{$post->content}}
         </p>
 
-        <a href="/category/" class="bg-blue-500 rounded-md  px-4 py-2 text-gray-100 hover:bg-blue-600">Volver</a>
+    @if (Auth::check() && Auth::user()->name == $post->poster)
+    <a href="/category/edit/{{$post->id}}">editar</a>
+@endif
+    <a href="/category/" class="bg-blue-500 rounded-md  px-4 py-2 text-gray-100 hover:bg-blue-600">Volver</a>
     </div>
 </x-app-layout>
