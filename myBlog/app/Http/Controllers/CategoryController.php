@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class CategoryController extends Controller
 {
     public function getIndex() {
-        $posts = post::all();
+        $posts = post::orderBy('id','desc')->get();
         return view('category/index', compact('posts'));
     }
 

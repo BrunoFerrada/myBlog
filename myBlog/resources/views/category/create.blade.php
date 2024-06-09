@@ -5,11 +5,11 @@
         @csrf
 
         <label>
-            Título: <input type="text" name="title">
+            <input type="text" name="title" placeholder="Ingrese un título">
         </label>
 
         <label>
-            contenido: <textarea name="content"></textarea>
+            <textarea name="content" placeholder="Ingrese su contenido"></textarea>
         </label>
 
         <button type="submit"> Crear post </button>
