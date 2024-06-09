@@ -59,6 +59,11 @@ class CategoryController extends Controller
         return redirect("/category/show/".$post->id);
     }
 
-    
+    public function destroy($post) {
+        $post = post::find($post);
+        $post->delete();
+        
+        return redirect("/category");
+    }
 
 }
