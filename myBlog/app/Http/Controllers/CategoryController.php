@@ -41,4 +41,16 @@ class CategoryController extends Controller
     public function getEdit($id) {
         return view('category/edit') .$id;
     }
+    
+
+    public function edit($id) {
+        $post = Post::findOrFail($id);
+
+        if (Auth::user()->name != $post->user->name) {
+            return redirect('/category')->with('error', 'No tienes permisos para editar este post');
+        }
+
+        return view('category.edit', compact('post'));
+    }
+
 }
