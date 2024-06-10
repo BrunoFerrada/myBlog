@@ -29,8 +29,8 @@ Route::controller(CategoryController::class)->group(function(){
     Route::delete('category/show/{id}',  'destroy')->name('category.destroy');  
 });
 
-Route::get('prueba', function(){
-    /*Crea un nuevo post
+/*Route::get('prueba', function(){
+    Crea un nuevo post
     $post = new post;
 
     $post->title = 'Titulo de prueba 2';
@@ -39,7 +39,7 @@ Route::get('prueba', function(){
 
     $post->save();
 
-    return $post;*/
-});
+    return $post;
+});*/
 
 require __DIR__.'/auth.php';
