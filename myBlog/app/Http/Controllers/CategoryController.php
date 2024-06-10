@@ -9,8 +9,18 @@ use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
-    public function getIndex() {
-        $posts = post::orderBy('id','desc')->get();
+    public function getIndex(Request $request) {
+        $category_id = $request->input('category_id');
+        
+        if ($category_id) {
+            // Filtrar posts por la categoría seleccionada
+            $posts = Post::where('idCategory', $category_id)->where('habilitated', false)->orderBy('created_at', 'desc')->get();
+        } else {
+            // Obtener todos los posts si no se selecciona ninguna categoría
+            $posts = Post::where('habilitated', false)->orderBy('created_at', 'desc')->get();
+        }
+
+        
         return view('category/index', compact('posts'));
     }
 
@@ -61,7 +71,8 @@ class CategoryController extends Controller
 
     public function destroy($post) {
         $post = post::find($post);
-        $post->delete();
+        $post->habilitated = true;
+        $post->save();
         
         return redirect("/category");
     }
