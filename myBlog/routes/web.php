@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Models\Filter;
 use App\Models\post;
 
 Route::get('/', function () {
@@ -29,17 +30,24 @@ Route::controller(CategoryController::class)->group(function(){
     Route::delete('category/show/{id}',  'destroy')->name('category.destroy');  
 });
 
-/*Route::get('prueba', function(){
-    Crea un nuevo post
-    $post = new post;
+Route::get('prueba', function(){
+    /*$post = new post;
 
     $post->title = 'Titulo de prueba 2';
+    $post->idUserPoster = 1;
     $post->poster = 'Poster de prueba 2';
+    $post->idCategory = 1;
     $post->content = 'Contenido de prueba 2';
 
     $post->save();
 
-    return $post;
-});*/
+    return $post;*/
+
+    $filter = new Filter;
+
+    $filter->nameCategory = "Música";
+    $filter->save();
+    return $filter;
+});
 
 require __DIR__.'/auth.php';
