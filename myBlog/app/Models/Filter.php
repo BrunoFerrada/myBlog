@@ -17,4 +17,9 @@ class Filter extends Model
     protected $casts = [
       'habilitated' => 'boolean',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'idCategory', 'idCategory');
+    }
 }

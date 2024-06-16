@@ -15,7 +15,7 @@
                         @endforeach
                     </select>
                     <div class="px-4">
-                        <button type="submit" class="text-blue-600 font-semibold rounded-full border border-blue-600 hover:text-white hover:bg-blue-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 px-5 py-2">Filtrar</button>
+                        <button type="submit" class="bg-blue-500 rounded-md  px-4 py-2 text-gray-100 hover:bg-blue-600">Filtrar</button>
                     </div>
                 </div>
             </form>

@@ -5,6 +5,9 @@
             <b>Autor: </b> {{$post->poster}}
         </p>
         <p class="text-gray-100 mb-4">
+            <b>Categoría:</b> {{$post->Category->nameCategory}}
+        </p>
+        <p class="text-gray-100 mb-4">
             {{$post->content}}
         </p>
         <div class="flex justify-between">
